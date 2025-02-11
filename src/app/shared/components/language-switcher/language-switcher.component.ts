@@ -25,7 +25,7 @@ import { TranslateService } from '@ngx-translate/core';
   styles: [`
     button {
       min-width: 120px;
-      color: white;
+      color: black;
     }
     mat-icon {
       margin-right: 8px;
