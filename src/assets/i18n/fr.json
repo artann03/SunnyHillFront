@@ -1,0 +1,8 @@
+{
+  "AUTH": {
+    "FORGOT_PASSWORD": {
+      "TITLE": "Récupération de Mot de Passe",
+      "SUBTITLE": "Réinitialisez votre mot de passe en toute sécurité"
+    }
+  }
+} 

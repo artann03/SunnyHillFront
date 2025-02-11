@@ -1,0 +1,88 @@
+<div class="products-container">
+  <!-- Add Product Container for Admin -->
+  <div *ngIf="isAdmin()" class="add-product-container" (click)="addNewProduct()">
+    <mat-icon class="add-icon">add_circle</mat-icon>
+    <h2>{{ 'PRODUCTS.ADD_NEW' | translate }}</h2>
+    <p>{{ 'PRODUCTS.ADD_NEW_DESC' | translate }}</p>
+  </div>
+
+  <div class="filters-section">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'PRODUCTS.SEARCH' | translate }}</mat-label>
+      <input matInput [(ngModel)]="searchTerm" (input)="onSearch($event)" [placeholder]="'PRODUCTS.SEARCH_PLACEHOLDER' | translate">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'PRODUCTS.SORT_BY' | translate }}</mat-label>
+      <mat-select [(ngModel)]="filters.OrderByDescending" (selectionChange)="loadProducts()">
+        <mat-option [value]="null">{{ 'PRODUCTS.SORT_DEFAULT' | translate }}</mat-option>
+        <mat-option [value]="true">{{ 'PRODUCTS.SORT_HIGH_LOW' | translate }}</mat-option>
+        <mat-option [value]="false">{{ 'PRODUCTS.SORT_LOW_HIGH' | translate }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-checkbox [(ngModel)]="filters.IsInStock" (change)="loadProducts()">
+      {{ 'PRODUCTS.IN_STOCK_ONLY' | translate }}
+    </mat-checkbox>
+  </div>
+
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+  
+  <div *ngIf="!loading && products.length > 0" class="products-grid">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <img mat-card-image [src]="product.imageUrl" alt="{{ product.name }}">
+      <div class="product-info">
+        <mat-card-header>
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-subtitle>{{ product.description }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="price">{{ product.price | currency }}</p>
+          <p class="stock">In Stock: {{ product.quantity }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="buyProduct(product.publicId)" 
+                  [disabled]="product.quantity === 0">
+            {{ product.quantity === 0 ? 'Out of Stock' : 'Buy Now' }}
+          </button>
+          <div *ngIf="isAdmin()" class="admin-actions">
+            <button mat-icon-button 
+                    color="primary" 
+                    class="edit-btn"
+                    (click)="$event.stopPropagation(); updateProduct(product)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button 
+                    color="warn" 
+                    class="delete-btn"
+                    (click)="$event.stopPropagation(); deleteProduct(product.publicId)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+  
+  <div *ngIf="!loading && products.length === 0" class="no-products">
+    <p>No products available.</p>
+  </div>
+
+  <div class="load-more-container" *ngIf="!loading && (hasMoreProducts || isShowingMore)">
+    <button mat-raised-button 
+            color="primary" 
+            (click)="loadMoreProducts()">
+      {{ isShowingMore ? ('PRODUCTS.SHOW_LESS' | translate) : ('PRODUCTS.LOAD_MORE' | translate) }}
+    </button>
+  </div>
+
+  <button mat-fab color="primary" class="add-product-btn" (click)="addNewProduct()" *ngIf="isAdmin()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<app-footer></app-footer>
+  

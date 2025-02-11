@@ -1,0 +1,169 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background-dark);
+}
+
+.image-section {
+  flex: 1;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 16px;
+  background: var(--background-light);
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+.logo-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.image-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.image-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+mat-card-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+mat-card-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+button[type="submit"]:disabled {
+  background: var(--text-secondary);
+  transform: none;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+}
+
+.guest-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+:host ::ng-deep .mat-mdc-form-field {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+:host ::ng-deep .mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-height: 56px;
+  background-color: white;
+}
+
+:host ::ng-deep .mat-mdc-form-field-infix {
+  padding: 28px 0 16px;
+  min-height: 56px;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  
+  .image-section {
+    min-height: 200px;
+  }
+}
+
+.success-message {
+  text-align: center;
+  color: var(--success-color);
+  margin: 2rem 0;
+}
+
+.success-message p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.language-switcher button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+} 

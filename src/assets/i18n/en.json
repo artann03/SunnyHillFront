@@ -1,0 +1,117 @@
+{
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Login",
+      "SUBTITLE": "Welcome back to your account",
+      "WELCOME": "Welcome Back!",
+      "PLEASE_LOGIN": "Please login to your account",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "EMAIL_REQUIRED": "Please enter a valid email",
+      "PASSWORD_REQUIRED": "Password is required",
+      "LOGIN_BUTTON": "Login",
+      "REGISTER": "Register",
+      "FORGOT_PASSWORD": "Forgot Password?",
+      "CONTINUE_GUEST": "Continue as Guest"
+    },
+    "REGISTER": {
+      "TITLE": "Register",
+      "SUBTITLE": "Create your new account",
+      "CREATE_ACCOUNT": "Create Account",
+      "PLEASE_REGISTER": "Please register your account",
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "NAME_REQUIRED": "Name is required",
+      "EMAIL_REQUIRED": "Please enter a valid email",
+      "PASSWORD_REQUIRED": "Password must be at least 6 characters",
+      "REGISTER_BUTTON": "Register",
+      "BACK_LOGIN": "Back to Login",
+      "CONTINUE_GUEST": "Continue as Guest"
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Password Recovery",
+      "SUBTITLE": "Reset your password securely",
+      "HEADER": "Forgot Password?",
+      "INSTRUCTIONS": "Enter your email address and we'll send you instructions to reset your password.",
+      "EMAIL": "Email",
+      "EMAIL_REQUIRED": "Please enter a valid email",
+      "SEND_BUTTON": "Send Reset Link",
+      "SUCCESS_MESSAGE": "If an account exists with this email, you will receive password reset instructions.",
+      "BACK_LOGIN": "Back to Login",
+      "CONTINUE_GUEST": "Continue as Guest"
+    },
+    "RESET_PASSWORD": {
+      "TITLE": "Reset Password",
+      "SUBTITLE": "Enter your new password",
+      "HEADER": "Create New Password",
+      "NEW_PASSWORD": "New Password",
+      "CONFIRM_PASSWORD": "Confirm Password",
+      "PASSWORD_REQUIRED": "Password is required",
+      "PASSWORD_LENGTH": "Password must be at least 6 characters",
+      "PASSWORD_MISMATCH": "Passwords do not match",
+      "SUBMIT": "Reset Password"
+    }
+  },
+  "HOME": {
+    "WELCOME": "Welcome to SunnyHill Store",
+    "SUBTITLE": "Your one-stop shop for everything you need",
+    "FEATURED_PRODUCTS": "Featured Products",
+    "BROWSE_ALL": "Browse Products",
+    "GET_STARTED": "Get Started",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "FAST_DELIVERY": "Fast Delivery",
+    "DELIVERY_TEXT": "Get your items delivered quickly",
+    "SECURE_SHOPPING": "Secure Shopping",
+    "SECURE_TEXT": "Shop with confidence",
+    "SUPPORT": "24/7 Support",
+    "SUPPORT_TEXT": "We're here to help"
+  },
+  "PRODUCTS": {
+    "TITLE": "Our Products",
+    "SEARCH": "Search products...",
+    "NO_RESULTS": "No products found",
+    "PRICE": "Price",
+    "ADD_TO_CART": "Add to Cart",
+    "VIEW_DETAILS": "View Details",
+    "ADD_NEW": "Add New Product",
+    "ADD_NEW_DESC": "Click here to add a new product to the store",
+    "SEARCH_PLACEHOLDER": "Search...",
+    "SORT_BY": "Sort By",
+    "SORT_DEFAULT": "Default",
+    "SORT_HIGH_LOW": "Price High to Low",
+    "SORT_LOW_HIGH": "Price Low to High",
+    "IN_STOCK_ONLY": "In Stock Only",
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "LOAD_MORE": "Load More Products",
+    "SHOW_LESS": "Show Less"
+  },
+    "PROFILE": {
+      "EDIT_PROFILE": {
+        "TITLE": "Edit Profile",
+        "NAME": "Name",
+        "NAME_REQUIRED": "Name is required",
+        "CURRENT_PASSWORD": "Current Password",
+        "CURRENT_PASSWORD_REQUIRED": "Current password is required to change password",
+        "NEW_PASSWORD": "New Password",
+        "PASSWORD_LENGTH": "Password must be at least 6 characters"
+      }
+    },
+    "COMMON": {
+      "SAVE": "Save",
+      "CANCEL": "Cancel"
+    },
+  "DASHBOARD": {
+    "TITLE": "Admin Dashboard",
+    "TOTAL_PRODUCTS": "Total Products",
+    "ACTIVE_USERS": "Active Users",
+    "OUT_OF_STOCK": "Out of Stock",
+    "LOW_STOCK": "Low Stock",
+    "TOTAL_ORDERS": "Total Orders",
+    "TOTAL_REVENUE": "Total Revenue",
+    "MONTHLY_REVENUE": "Monthly Revenue",
+    "TOP_PRODUCTS": "Top Selling Products"
+  }
+}

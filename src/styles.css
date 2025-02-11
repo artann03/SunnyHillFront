@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  --primary-color: #ff9a9e;
+  --secondary-color: #fad0c4;
+  --accent-color: #ffd1d1;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --background-light: #ffffff;
+  --background-dark: #f8f9fa;
+  --error-color: #ff6b6b;
+  --success-color: #51cf66;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Remove any old color variables */
+:root {
+  --primary-bg: var(--background-light);
+  --secondary-bg: var(--primary-color);
+  --secondary-bg-hover: var(--secondary-color);
+  --accent: var(--accent-color);
+  --text-dark: var(--text-primary);
+  --text: var(--text-secondary);
+}
+
+html, body { height: 100%; }
+body { margin: 0; padding: 0; background-color: var(--primary-bg); color: var(--text); font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.success-snackbar {
+  background: #4caf50;
+  color: white;
+}
+
+.error-snackbar {
+  background: #f44336;
+  color: white;
+}
+
+.mat-mdc-snack-bar-action {
+  color: white !important;
+}

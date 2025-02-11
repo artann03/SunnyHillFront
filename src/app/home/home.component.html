@@ -1,0 +1,42 @@
+<div class="home-container">
+  <header class="hero-section">
+    <h1>{{ 'HOME.WELCOME' | translate }}</h1>
+    <p>{{ 'HOME.SUBTITLE' | translate }}</p>
+    <div class="cta-buttons">
+      <button mat-raised-button color="primary" routerLink="/products">
+        {{ 'HOME.BROWSE_ALL' | translate }}
+      </button>
+      <button mat-stroked-button routerLink="/login" *ngIf="!isLoggedIn()">
+        {{ 'HOME.LOGIN' | translate }}
+      </button>
+    </div>
+  </header>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">
+        <mat-icon>local_shipping</mat-icon>
+      </div>
+      <h3>{{ 'HOME.FAST_DELIVERY' | translate }}</h3>
+      <p>{{ 'HOME.DELIVERY_TEXT' | translate }}</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <mat-icon>security</mat-icon>
+      </div>
+      <h3>{{ 'HOME.SECURE_SHOPPING' | translate }}</h3>
+      <p>{{ 'HOME.SECURE_TEXT' | translate }}</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <mat-icon>support_agent</mat-icon>
+      </div>
+      <h3>{{ 'HOME.SUPPORT' | translate }}</h3>
+      <p>{{ 'HOME.SUPPORT_TEXT' | translate }}</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,103 @@
+{
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Willkommen zurück",
+      "SUBTITLE": "Melden Sie sich an, um fortzufahren",
+      "WELCOME": "Willkommen",
+      "PLEASE_LOGIN": "Bitte melden Sie sich an",
+      "EMAIL": "E-Mail",
+      "EMAIL_REQUIRED": "E-Mail ist erforderlich",
+      "PASSWORD": "Passwort",
+      "PASSWORD_REQUIRED": "Passwort ist erforderlich",
+      "LOGIN_BUTTON": "Anmelden",
+      "REGISTER": "Registrieren",
+      "FORGOT_PASSWORD": "Passwort vergessen?",
+      "CONTINUE_GUEST": "Als Gast fortfahren"
+    },
+    "REGISTER": {
+      "TITLE": "Registrieren",
+      "SUBTITLE": "Erstellen Sie Ihr neues Konto",
+      "CREATE_ACCOUNT": "Konto erstellen",
+      "PLEASE_REGISTER": "Bitte registrieren Sie Ihr Konto",
+      "NAME": "Name",
+      "EMAIL": "E-Mail",
+      "PASSWORD": "Passwort",
+      "NAME_REQUIRED": "Name wird benötigt",
+      "EMAIL_REQUIRED": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "PASSWORD_REQUIRED": "Passwort muss mindestens 6 Zeichen lang sein",
+      "REGISTER_BUTTON": "Registrieren",
+      "BACK_LOGIN": "Zurück zur Anmeldung",
+      "CONTINUE_GUEST": "Als Gast fortfahren"
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Passwort zurücksetzen",
+      "SUBTITLE": "Setzen Sie Ihr Passwort sicher zurück",
+      "HEADER": "Passwort vergessen?",
+      "INSTRUCTIONS": "Geben Sie Ihre E-Mail-Adresse ein",
+      "EMAIL": "E-Mail",
+      "EMAIL_REQUIRED": "E-Mail ist erforderlich",
+      "SEND_BUTTON": "Link senden",
+      "SUCCESS_MESSAGE": "Wenn ein Konto mit dieser E-Mail existiert, erhalten Sie Anweisungen zum Zurücksetzen.",
+      "BACK_LOGIN": "Zurück zur Anmeldung",
+      "CONTINUE_GUEST": "Als Gast fortfahren"
+    }
+  },
+  "HOME": {
+    "WELCOME": "Willkommen bei SunnyHill Store",
+    "SUBTITLE": "Ihr One-Stop-Shop für alles, was Sie brauchen",
+    "BROWSE_ALL": "Produkte durchsuchen",
+    "LOGIN": "Anmelden",
+    "FAST_DELIVERY": "Schnelle Lieferung",
+    "DELIVERY_TEXT": "Erhalten Sie Ihre Artikel schnell geliefert",
+    "SECURE_SHOPPING": "Sicheres Einkaufen",
+    "SECURE_TEXT": "Einkaufen mit Vertrauen",
+    "SUPPORT": "24/7 Support",
+    "SUPPORT_TEXT": "Wir sind für Sie da"
+  },
+  "PRODUCTS": {
+    "TITLE": "Unsere Produkte",
+    "SEARCH": "Produkte suchen",
+    "NO_RESULTS": "Keine Produkte gefunden",
+    "PRICE": "Preis",
+    "ADD_TO_CART": "In den Warenkorb",
+    "VIEW_DETAILS": "Details anzeigen",
+    "ADD_NEW": "Neues Produkt hinzufügen",
+    "ADD_NEW_DESC": "Klicken Sie hier, um ein neues Produkt zum Shop hinzuzufügen",
+    "SEARCH_PLACEHOLDER": "Suchen...",
+    "SORT_BY": "Sortieren nach",
+    "SORT_DEFAULT": "Standard",
+    "SORT_HIGH_LOW": "Preis hoch zu niedrig",
+    "SORT_LOW_HIGH": "Preis niedrig zu hoch",
+    "IN_STOCK_ONLY": "Nur verfügbare Artikel",
+    "DELETE": "Löschen",
+    "EDIT": "Bearbeiten",
+    "LOAD_MORE": "Weitere Produkte laden",
+    "SHOW_LESS": "Weniger anzeigen"
+  },
+  "PROFILE": {
+    "EDIT_PROFILE": {
+      "TITLE": "Profil bearbeiten",
+      "NAME": "Name",
+      "NAME_REQUIRED": "Name ist erforderlich",
+      "CURRENT_PASSWORD": "Aktuelles Passwort",
+      "CURRENT_PASSWORD_REQUIRED": "Aktuelles Passwort wird benötigt, um das Passwort zu ändern",
+      "NEW_PASSWORD": "Neues Passwort",
+      "PASSWORD_LENGTH": "Passwort muss mindestens 6 Zeichen lang sein"
+    }
+  },
+  "COMMON": {
+    "SAVE": "Speichern",
+    "CANCEL": "Abbrechen"
+  },
+  "DASHBOARD": {
+    "TITLE": "Admin-Dashboard",
+    "TOTAL_PRODUCTS": "Gesamtprodukte",
+    "ACTIVE_USERS": "Aktive Benutzer",
+    "OUT_OF_STOCK": "Nicht auf Lager",
+    "LOW_STOCK": "Niedriger Bestand",
+    "TOTAL_ORDERS": "Gesamtbestellungen",
+    "TOTAL_REVENUE": "Gesamtumsatz",
+    "MONTHLY_REVENUE": "Monatlicher Umsatz",
+    "TOP_PRODUCTS": "Meistverkaufte Produkte"
+  }
+} 

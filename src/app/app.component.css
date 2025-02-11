@@ -1,0 +1,200 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+.logo-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.store-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9a9e;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+main {
+  padding-top: 0;
+}
+
+main.with-navbar {
+  padding-top: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-links app-language-switcher {
+  margin: 0 1rem;
+}
+
+.nav-links app-language-switcher button {
+  color: #666;
+  font-weight: 500;
+}
+
+.nav-links app-language-switcher button:hover {
+  color: #ff9a9e;
+}
+
+.menu-button {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .mobile-nav.open {
+    transform: translateY(0);
+  }
+
+  .mobile-nav a,
+  .mobile-nav button {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    display: block;
+  }
+
+  .mobile-nav app-language-switcher {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-nav .login-btn,
+  .mobile-nav .logout-btn {
+    margin: 0.5rem auto;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .store-name {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+}

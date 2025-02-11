@@ -1,0 +1,56 @@
+<div class="auth-container">
+  <div class="image-section">
+    <div>
+      <div class="logo">
+        <span class="logo-text">SH</span>
+      </div>
+      <h2>{{ 'AUTH.REGISTER.TITLE' | translate }}</h2>
+      <p>{{ 'AUTH.REGISTER.SUBTITLE' | translate }}</p>
+    </div>
+    <div class="language-switcher">
+      <app-language-switcher></app-language-switcher>
+    </div>
+  </div>
+  <div class="form-section">
+    <mat-card class="auth-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'AUTH.REGISTER.CREATE_ACCOUNT' | translate }}</mat-card-title>
+        <mat-card-subtitle>{{ 'AUTH.REGISTER.PLEASE_REGISTER' | translate }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'AUTH.REGISTER.NAME' | translate }}</mat-label>
+            <input matInput formControlName="name" required>
+            <mat-error *ngIf="registerForm.get('name')?.invalid">{{ 'AUTH.REGISTER.NAME_REQUIRED' | translate }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'AUTH.REGISTER.EMAIL' | translate }}</mat-label>
+            <input matInput type="email" formControlName="email" required>
+            <mat-error *ngIf="registerForm.get('email')?.invalid">{{ 'AUTH.REGISTER.EMAIL_REQUIRED' | translate }}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'AUTH.REGISTER.PASSWORD' | translate }}</mat-label>
+            <input matInput type="password" formControlName="password" required>
+            <mat-error *ngIf="registerForm.get('password')?.invalid">{{ 'AUTH.REGISTER.PASSWORD_REQUIRED' | translate }}</mat-error>
+          </mat-form-field>
+
+          <re-captcha
+            formControlName="recaptcha"
+            [siteKey]="recaptchaSiteKey">
+          </re-captcha>
+
+          <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+            {{ 'AUTH.REGISTER.REGISTER_BUTTON' | translate }}
+          </button>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button routerLink="/login">{{ 'AUTH.REGISTER.BACK_LOGIN' | translate }}</button>
+        <button mat-stroked-button routerLink="/" class="guest-btn">{{ 'AUTH.REGISTER.CONTINUE_GUEST' | translate }}</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

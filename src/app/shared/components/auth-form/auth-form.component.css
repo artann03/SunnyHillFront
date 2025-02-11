@@ -1,0 +1,220 @@
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--background-dark);
+}
+
+.image-section {
+  flex: 1;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 16px;
+  background: var(--background-light);
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+mat-card-title {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+mat-card-subtitle {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+mat-error {
+  margin-top: 0.25rem;
+  display: block;
+  font-size: 0.875rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:disabled {
+  background: var(--text-secondary);
+  transform: none;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+}
+
+:host ::ng-deep .mat-mdc-form-field {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+:host ::ng-deep .mat-mdc-form-field-infix {
+  padding: 20px 0 8px;
+  min-height: 42px;
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  height: 42px;
+}
+
+:host ::ng-deep .mat-mdc-form-field-flex {
+  min-height: 42px;
+}
+
+:host ::ng-deep .mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-height: 42px;
+}
+
+:host ::ng-deep .mdc-floating-label {
+  top: 22px !important;
+}
+
+:host ::ng-deep .mdc-floating-label--float-above {
+  transform: translateY(-18px) scale(0.75) !important;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.action-buttons button {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.action-buttons button:hover {
+  color: var(--secondary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  margin: 0.1rem 0;
+  padding: 0.5rem;
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.guest-section {
+  margin-top: 0.15rem;
+  text-align: center;
+  width: 100%;
+}
+
+.divider {
+  display: block;
+  text-align: center;
+  margin: 0.15rem 0;
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.guest-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.guest-btn:hover {
+  background: var(--background-light);
+  color: var(--text-primary);
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  background: var(--primary-gradient);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.logo-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-content {
+  padding-bottom: 0.1rem;
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} 

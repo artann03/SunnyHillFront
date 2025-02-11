@@ -1,0 +1,168 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.image-section {
+  flex: 1;
+  background-color: #ffb6c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.image-content {
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+mat-card-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.75rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.guest-section {
+  text-align: center;
+}
+
+.divider {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.guest-btn {
+  width: 100%;
+}
+
+.language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  
+  .image-section {
+    min-height: 180px;
+    padding: 1rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  mat-card-header {
+    margin-bottom: 1rem;
+  }
+
+  mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  mat-card-actions button {
+    width: 100%;
+  }
+
+  re-captcha {
+    transform: scale(0.9);
+    transform-origin: left top;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-card {
+    padding: 1rem;
+  }
+
+  .image-section {
+    min-height: 150px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  re-captcha {
+    transform: scale(0.8);
+  }
+} 
