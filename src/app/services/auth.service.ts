@@ -55,6 +55,25 @@ export class AuthService {
     console.log('[AuthService] Initialized');
   }
 
+  private getLocalStorage(key: string): string | null {
+    if (isPlatformBrowser(this.platformId)) {
+      return localStorage.getItem(key);
+    }
+    return null;
+  }
+
+  private setLocalStorage(key: string, value: string): void {
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem(key, value);
+    }
+  }
+
+  private removeLocalStorage(key: string): void {
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem(key);
+    }
+  }
+
   login(credentials: LoginRequest): Observable<AuthResponse> {
     console.log('[AuthService] Attempting login with:', { email: credentials.email });
     return this.http.post<AuthResponse>(`${this.apiUrl}/Auth/login`, credentials, this.httpOptions)
@@ -62,9 +81,9 @@ export class AuthService {
         tap(response => {
           console.log('[AuthService] Login response:', response);
           if (isPlatformBrowser(this.platformId)) {
-            localStorage.setItem('token', response.token);
-            localStorage.setItem('userName', response.userName);
-            localStorage.setItem('userRole', response.userRole);
+            this.setLocalStorage('token', response.token);
+            this.setLocalStorage('userName', response.userName);
+            this.setLocalStorage('userRole', response.userRole);
             console.log('[AuthService] Stored credentials in localStorage');
           }
         }),
@@ -79,8 +98,8 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${this.apiUrl}/Auth/register`, data, this.httpOptions).pipe(
       tap(response => {
         if (isPlatformBrowser(this.platformId)) {
-          localStorage.setItem('token', response.token);
-          localStorage.setItem('userName', response.userName);
+          this.setLocalStorage('token', response.token);
+          this.setLocalStorage('userName', response.userName);
         }
       })
     );
@@ -102,24 +121,24 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
+    return !!this.getLocalStorage('token');
   }
 
   isAdmin(): boolean {
-    return localStorage.getItem('userRole') === 'Admin';
+    return this.getLocalStorage('userRole') === 'Admin';
   }
 
   getAuthToken(): string | null {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('token');
+      return this.getLocalStorage('token');
     }
     return null;
   }
 
   logout(): void {
-    localStorage.removeItem('token');
-    localStorage.removeItem('userName');
-    localStorage.removeItem('userRole');
+    this.removeLocalStorage('token');
+    this.removeLocalStorage('userName');
+    this.removeLocalStorage('userRole');
     this.router.navigate(['/login']);
   }
 
@@ -130,7 +149,7 @@ export class AuthService {
       return of(null);
     }
 
-    const token = localStorage.getItem('token');
+    const token = this.getLocalStorage('token');
     console.log('[AuthService] Token exists:', !!token);
     
     if (!token) {
@@ -160,7 +179,7 @@ export class AuthService {
 
   getUserRole(): string | null {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('userRole');
+      return this.getLocalStorage('userRole');
     }
     return null;
   }

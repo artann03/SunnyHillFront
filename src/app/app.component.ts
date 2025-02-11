@@ -95,6 +95,9 @@ export class AppComponent implements OnInit {
   }
 
   isAdmin(): boolean {
-    return this.authService.isAdmin();
+    if (isPlatformBrowser(this.platformId)) {
+      return this.authService.isAdmin();
+    }
+    return false;
   }
 }
